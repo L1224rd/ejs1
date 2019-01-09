@@ -3,7 +3,6 @@
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
-const ejs = require('ejs');
 
 // ==================== INTERNAL IMPORTS ==================== //
 
@@ -16,6 +15,7 @@ const app = express();
 // set the view engine to ejs
 app.set('view engine', 'ejs');
 
+// Allow different origins and resolve cors CORS error
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');

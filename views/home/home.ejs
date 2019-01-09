@@ -13,9 +13,10 @@
   <h1>
     Hi <%= name %>, you like
       <% like.forEach((each) => { %>
-        <%= each %>,
+        <%= each %><% if (like.indexOf(each) !== like.length - 1) { %>, <% } %>
       <% }) %>
   </h1>
+  <% include ../../partials/footer %>
 </body>
 <script src="/views/home/home.js"></script>
 
